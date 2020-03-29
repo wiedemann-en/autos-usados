@@ -1,0 +1,4 @@
+C:\Source\BusquedaVehiculos\Dev\Source\BusquedaVehiculos.Infra\bin\Debug\BusquedaVehiculos.Infra.dll
+C:\Source\BusquedaVehiculos\Dev\Source\BusquedaVehiculos.Infra\bin\Debug\BusquedaVehiculos.Infra.pdb
+C:\Source\BusquedaVehiculos\Dev\Source\BusquedaVehiculos.Infra\obj\Debug\BusquedaVehiculos.Infra.dll
+C:\Source\BusquedaVehiculos\Dev\Source\BusquedaVehiculos.Infra\obj\Debug\BusquedaVehiculos.Infra.pdb

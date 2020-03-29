@@ -1,0 +1,41 @@
+USE [BusquedaVehiculos]
+GO
+
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', '100', '100');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', '200', '200');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', '5000', '5000');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', '80', '80');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'a1', 'A1');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'a100', 'A100');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'a1-sportback', 'A1 Sportback');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'a3', 'A3');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'a3-sedan', 'A3 Sedán');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'a3-sportback', 'A3 Sportback');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'a4', 'A4');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'a4-allroad', 'A4 Allroad');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'a4-avant', 'A4 Avant');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'a5', 'A5');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'a5-sportback', 'A5 Sportback');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'a6', 'A6');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'a6-allroad', 'A6 Allroad');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'a6-avanta', 'A6 Avanta');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'a7', 'A7');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'a7-sportback', 'A7 Sportback');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'a8', 'A8');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'allroad', 'Allroad');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'cabio', 'Cabio');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'gt', 'GT');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'otro', 'Otro');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'q3', 'Q3');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'q5', 'Q5');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'q7', 'Q7');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'r8-coupe', 'R8 Coupé');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'rs4', 'RS4');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'rs5', 'RS5');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 's3', 'S3');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 's4', 'S4');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 's5', 'S5');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 's8', 'S8');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'tt', 'TT');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'tt-roadster', 'TT Roadster');
+INSERT INTO TB_VehiculoSubMarca (CodVehiculoMarca, CodVehiculoSubMarca, DescVehiculoSubMarca) VALUES ('audi', 'tt-rs', 'TT RS');

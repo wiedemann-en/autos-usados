@@ -1,0 +1,64 @@
+﻿@model BusquedaVehiculos.Web.Models.Busqueda.BusquedaResponseVM
+@{
+    ViewBag.Title = "Resultado Búsqueda";
+}
+<div class="fixed-panel">
+    <div class="container">
+        <div class="panel-buscador">
+            <span class="text-primary">@ViewBag.DescripcionBusqueda</span>
+            <button type="button" class="btn btn-primary btn-xs pull-right" id="btnNuevaBusqueda"><i class="fa fa-fw fa-refresh"></i> Nueva Búsqueda</button>
+        </div>
+    </div>
+</div>
+<div class="row" style="padding-top: 50px;">
+    <div class="col-xs-12 text-center" style="padding-bottom:15px;padding-top:15px;" id="divBuscando">
+        <div class="form-group">
+            <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
+        </div>
+    </div>
+    <div class="col-xs-12" id="divResultado" style="display: none;padding-bottom:15px;padding-top:15px;">
+        <div class="row" id="ulResultadoBusqueda"></div>
+    </div>
+</div>
+
+@section Scripts {
+
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.signalR-2.2.1.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/ScriptsLogic/Busqueda.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/signalr/hubs")"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var results = [];
+
+            //Función a ejecutar por cada registro procesado
+            fnCallbackRegistroProcesado = function (message, progress) {
+                results.push(message);
+                if ((message.Items) && (message.Items.length > 0)) {
+                    $(message.Items).each(function () {
+                        var content =
+                            '<div class="col-xs-6 col-sm-4 col-md-3">' +
+                                '<a href="' + this.UrlDetalle + '" class="item" title="' + this.Descripcion + '">' +
+                                    '<figure><img src="' + this.LinkImagen + '" alt="' + this.Descripcion + '"></figure>' +
+                                    '<h3>' + this.Descripcion + ', ' + this.AnioModelo + ', ' + this.Kilometros + ' km' + '</h3>' +
+                                    '<p class="price">$' + this.Precio + '</p>' +
+                                    '<p class="displayLocation">' + this.Ubicacion + '</p>' +
+                                '</a>' +
+                            '</div>';
+                        $('#ulResultadoBusqueda').append(content);
+
+                        $('#divBuscando').hide();
+                        $('#divResultado').show();
+                    });
+                }
+            }
+
+            //Función a ejecutar al finalizar con la búsqueda
+            fnCallbackFinish = function () {
+            }
+
+            //Iniciamos el proceso de búsqueda
+            var jobId = "@Model.JobId";
+            Buscador.iniciarBusqueda(jobId, fnCallbackRegistroProcesado, fnCallbackFinish);
+        });
+    </script>
+}

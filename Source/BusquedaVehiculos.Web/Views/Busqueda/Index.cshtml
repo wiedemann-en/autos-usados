@@ -1,0 +1,316 @@
+﻿@model BusquedaVehiculos.Web.Models.Busqueda.BusquedaRequestVM
+@using BusquedaVehiculos.Web.Services;
+@{
+    ViewBag.Title = "Búsqueda Usados";
+    var urlRaiz = Url.Content("~");
+    var urlVehiculoSubMarcas = Url.Action("GetVehiculoSubMarca", "Busqueda");
+    var urlProvidersDisponibles = Url.Action("GetProvidersDisponibles", "Busqueda");
+    var urlImagenProvider = Url.Content("~/Content/images/providers/");
+
+    var optionsVehiculoProvincia = SelectListProvider.GetOptionsVehiculoProvincia();
+    var optionsVehiculoMarca = SelectListProvider.GetOptionsVehiculoMarca();
+    var optionsVehiculoColor = SelectListProvider.GetOptionsVehiculoColor();
+    var optionsVehiculoCombustible = SelectListProvider.GetOptionsVehiculoCombustible();
+    var optionsVehiculoDireccion = SelectListProvider.GetOptionsVehiculoDireccion();
+    var optionsVehiculoPuerta = SelectListProvider.GetOptionsVehiculoPuerta();
+    var optionsVehiculoSegmento = SelectListProvider.GetOptionsVehiculoSegmento();
+    var optionsVehiculoTraccion = SelectListProvider.GetOptionsVehiculoTraccion();
+    var optionsVehiculoTransmision = SelectListProvider.GetOptionsVehiculoTransmision();
+
+    var camposOptions = new Dictionary<String, List<SelectListItem>>();
+    camposOptions.Add("CodVehiculoProvincia", optionsVehiculoProvincia);
+    camposOptions.Add("CodVehiculoMarca", optionsVehiculoMarca);
+    camposOptions.Add("CodVehiculoSubMarca", new List<SelectListItem>());
+    camposOptions.Add("CodVehiculoColor", optionsVehiculoColor);
+    camposOptions.Add("CodVehiculoCombustible", optionsVehiculoCombustible);
+    camposOptions.Add("CodVehiculoDireccion", optionsVehiculoDireccion);
+    camposOptions.Add("CodVehiculoPuerta", optionsVehiculoPuerta);
+    camposOptions.Add("CodVehiculoSegmento", optionsVehiculoSegmento);
+    camposOptions.Add("CodVehiculoTraccion", optionsVehiculoTraccion);
+    camposOptions.Add("CodVehiculoTransmision", optionsVehiculoTransmision);
+
+    var camposNoVisibles = new List<String>();
+    camposNoVisibles.Add("Orden");
+    camposNoVisibles.Add("CodVehiculoCondicion");
+    camposNoVisibles.Add("CodVehiculoTipo");
+
+    var camposDescipcion = new Dictionary<String, String>();
+    camposDescipcion.Add("CodVehiculoMarca", "Marca");
+    camposDescipcion.Add("CodVehiculoSubMarca", "Modelo");
+    camposDescipcion.Add("CodVehiculoProvincia", "Provincia");
+    camposDescipcion.Add("CodVehiculoSegmento", "Segmento");
+    camposDescipcion.Add("CodVehiculoCombustible", "Combustible");
+    camposDescipcion.Add("CodVehiculoDireccion", "Dirección");
+    camposDescipcion.Add("CodVehiculoTransmision", "Transmisión");
+    camposDescipcion.Add("CodVehiculoTraccion", "Tracción");
+    camposDescipcion.Add("CodVehiculoColor", "Color");
+    camposDescipcion.Add("CodVehiculoPuerta", "Puertas");
+    camposDescipcion.Add("Anio", "Año");
+    camposDescipcion.Add("Kilometraje", "Kilometraje");
+    camposDescipcion.Add("Precio", "Precio");
+
+    var campos = typeof(BusquedaVehiculos.Contracts.Busqueda.BusquedaRequestDTO).GetProperties();
+    var countCampo = 0;
+}
+
+@using (Html.BeginForm("Resultado", "Busqueda", FormMethod.Post, new { @id = "frmBusqueda", @class = "panel-buscador", role = "form", buscador = "" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="row" filtros="campos">
+        @foreach (var campo in campos)
+        {
+            if (!camposNoVisibles.Contains(campo.Name))
+            {
+                <div class="col-sm-6 col-md-3" filtro="@campo.Name"@Html.Raw( countCampo >= 4 ? " style=\"display:none;\"" : "" )>
+                    <div class="form-group">
+                        <label for="@campo.Name">
+                            @camposDescipcion.SingleOrDefault(x => x.Key == campo.Name).Value
+                        </label>
+                        @if (camposOptions.ContainsKey(campo.Name))
+                        {
+                            var thisOptions = camposOptions.SingleOrDefault(x => x.Key == campo.Name).Value;
+                            <select name="Formulario.@campo.Name" class="form-control" filtro-campo="@campo.Name">
+                                <option selected style="display:none;" value>[Seleccione]</option>
+                                @foreach (var itemOption in thisOptions)
+                                {
+                                    <option value="@itemOption.Value">@itemOption.Text</option>
+                                }
+                            </select>
+                        }
+                        else
+                        {
+                            switch (campo.Name)
+                            {
+                                case "Anio":
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            @Html.TextBoxFor(model => model.Formulario.Anio.ValorDesde, new { @class = "form-control", @placeholder = "Desde", @type = "number", filtro_campo = campo.Name })
+                                        </div>
+                                        <div class="col-xs-6">
+                                            @Html.TextBoxFor(model => model.Formulario.Anio.ValorHasta, new { @class = "form-control", @placeholder = "Hasta", @type = "number", filtro_campo = campo.Name })
+                                        </div>
+                                    </div>
+                                    break;
+                                case "Kilometraje":
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            @Html.TextBoxFor(model => model.Formulario.Kilometraje.ValorDesde, new { @class = "form-control", @placeholder = "Desde", @type = "number" })
+                                        </div>
+                                        <div class="col-xs-6">
+                                            @Html.TextBoxFor(model => model.Formulario.Kilometraje.ValorHasta, new { @class = "form-control", @placeholder = "Hasta", @type = "number" })
+                                        </div>
+                                    </div>
+                                    break;
+                                case "Precio":
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            @Html.TextBoxFor(model => model.Formulario.Precio.ValorDesde, new { @class = "form-control", @placeholder = "Desde", @type = "number" })
+                                        </div>
+                                        <div class="col-xs-6">
+                                            @Html.TextBoxFor(model => model.Formulario.Precio.ValorHasta, new { @class = "form-control", @placeholder = "Hasta", @type = "number" })
+                                        </div>
+                                    </div>
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+
+                    </div>
+                </div>
+                countCampo++;
+            }
+        }
+    </div>
+    <div class="row">
+        <div class="col-xs-3 col-sm-2 col-md-offset-3 col-md-3 col-lg-1 col-lg-offset-9 text-right">
+                <button type="button" class="btn btn-warning btn-block dropdown-toggle hidden-md" data-toggle="modal" data-target="#modalfiltros">
+                    <i class="fa fa-fw fa-filter"></i>
+                </button>
+                <button type="button" class="btn btn-warning dropdown-toggle pull-right hidden-xs hidden-sm hidden-lg" data-toggle="modal" data-target="#modalfiltros">
+                    <i class="fa fa-fw fa-filter"></i>
+                </button>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-3 col-lg-1">
+            <input type="submit" class="btn btn-success btn-block" id="btnSubmit" value="Buscar" />
+        </div>
+        <div class="col-xs-5 col-sm-6 col-md-3 col-lg-1">
+            <input type="button" id="btnLimpiar" class="btn btn-default btn-block" value="Limpiar" />
+        </div>
+    </div>
+}
+<div class="col-xs-12" id="divProviders" style="padding-bottom:15px;padding-top:15px;text-align:center;"></div>
+<div class="modal fade" tabindex="-1" id="modalfiltros">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Selecciona los filtros que deseas usar</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row" filtros="disponibles">
+                    @{
+                        countCampo = 0;
+                        var campoDesactivado = false;
+                    }
+                    @foreach (var campo in campos)
+                    {
+                        if (!camposNoVisibles.Contains(campo.Name))
+                        {
+                            campoDesactivado = campo.Name == "CodVehiculoMarca" || campo.Name == "CodVehiculoSubMarca";
+                            <div class="checkbox @Html.Raw(campoDesactivado ? "disabled" : "" )">
+                                <label>
+                                    @if (campoDesactivado)
+                                    {
+                                        <input type="checkbox"@Html.Raw(countCampo < 4 ? " checked" : "")@Html.Raw(campoDesactivado ? " disabled" : "")>
+                                    }
+                                    else
+                                    {
+                                        <input type="checkbox" filtro="@campo.Name"@Html.Raw(countCampo < 4 ? " checked" : "")>
+                                    }
+                                    @camposDescipcion.SingleOrDefault(x => x.Key == campo.Name).Value
+                                </label>
+                            </div>
+                            countCampo++;
+                        }
+                    }
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script type="text/javascript">
+
+        var verificarProvidersDisponibles = function ($filtros) {
+            var codVehiculoProvincia = $filtros.find("CodVehiculoProvincia").val();
+            var codVehiculoMarca = $filtros.find("CodVehiculoMarca").val();
+            var codVehiculoSubMarca = $filtros.find("CodVehiculoSubMarca").val();
+            var codVehiculoColor = $filtros.find("CodVehiculoColor").val();
+            var codVehiculoCombustible = $filtros.find("CodVehiculoCombustible").val();
+            var codVehiculoDireccion = $filtros.find("CodVehiculoDireccion").val();
+            var codVehiculoPuerta = $filtros.find("CodVehiculoPuerta").val();
+            var codVehiculoSegmento = $filtros.find("CodVehiculoSegmento").val();
+            var codVehiculoTraccion = $filtros.find("CodVehiculoTraccion").val();
+            var codVehiculoTransmision = $filtros.find("CodVehiculoTransmision").val();
+
+            $.ajax({
+                async: false,
+                type: "POST",
+                url: "@urlProvidersDisponibles",
+                data: {
+                    CodVehiculoProvincia: codVehiculoProvincia,
+                    CodVehiculoMarca: codVehiculoMarca,
+                    CodVehiculoSubMarca: codVehiculoSubMarca,
+                    CodVehiculoColor: codVehiculoColor,
+                    CodVehiculoCombustible: codVehiculoCombustible,
+                    CodVehiculoDireccion: codVehiculoDireccion,
+                    CodVehiculoPuerta: codVehiculoPuerta,
+                    CodVehiculoSegmento: codVehiculoSegmento,
+                    CodVehiculoTraccion: codVehiculoTraccion,
+                    CodVehiculoTransmision: codVehiculoTransmision,
+                },
+                success: function (data) {
+                    $("#divProviders").empty();
+                    $(data).each(function () {
+                        var urlImagenProvider = "@urlImagenProvider" + this + ".png";
+                        var newProvider = '<img src="' + urlImagenProvider + '" alt="' + this + '" tittle="' + this + '" height="80" border="0" style="padding:5px;" />';
+                        $("#divProviders").append(newProvider);
+                    });
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            var $buscador = $("[buscador]");
+            var $filtros = $buscador.find('[filtros="campos"]');
+
+            var $filtrosdisponibles = $('[filtros="disponibles"]');
+            $filtrosdisponibles.find('[filtro]').change(function () {
+                var $this = $(this);
+                var codCampo = $this.attr('filtro');
+
+                var $campoThis = $filtros.find('[filtro="' + codCampo + '"]');
+
+                if ($this.is(':checked')) {
+                    $campoThis.show();
+                }
+                else {
+                    $campoThis.hide();
+                    $campoThis.find('select,input').val('');
+                }
+            });
+
+            $("#btnLimpiar").click(function () {
+                $filtros.find('select,input').val('');
+                $("#divProviders").empty();
+            });
+            
+            $filtros.find('[filtro="CodVehiculoMarca"] select').change(function () {
+                var $CodVehiculoMarca = $(this);
+                var $CodVehiculoSubMarca = $filtros.find('[filtro="CodVehiculoSubMarca"] select');
+                var codVehiculoMarca = $CodVehiculoMarca.val();
+                $.ajax({
+                    async: false,
+                    type: "POST",
+                    url: "@urlVehiculoSubMarcas",
+                    data: {
+                        codVehiculoMarca: codVehiculoMarca
+                    },
+                    success: function (data) {
+                        $CodVehiculoSubMarca.empty();
+                        $CodVehiculoSubMarca.append(new Option("[Seleccione]", ""));
+                        for (var iPos = 0; iPos < data.length; iPos++) {
+                            $CodVehiculoSubMarca.append(new Option(data[iPos].Text, data[iPos].Value));
+                        }
+
+                        //Verificamos los providers disponibles
+                        verificarProvidersDisponibles($filtros);
+                    }
+                });
+            });
+
+            $filtros.find("CodVehiculoProvincia").change(function () {
+                verificarProvidersDisponibles($filtros);
+            });
+
+            $filtros.find("CodVehiculoSubMarca").change(function () {
+                verificarProvidersDisponibles($filtros);
+            });
+
+            $filtros.find("CodVehiculoColor").change(function () {
+                verificarProvidersDisponibles($filtros);
+            });
+
+            $filtros.find("CodVehiculoCombustible").change(function () {
+                verificarProvidersDisponibles($filtros);
+            });
+
+            $filtros.find("CodVehiculoDireccion").change(function () {
+                verificarProvidersDisponibles($filtros);
+            });
+
+            $filtros.find("CodVehiculoPuerta").change(function () {
+                verificarProvidersDisponibles($filtros);
+            });
+
+            $filtros.find("CodVehiculoSegmento").change(function () {
+                verificarProvidersDisponibles($filtros);
+            });
+
+            $filtros.find("CodVehiculoTraccion").change(function () {
+                verificarProvidersDisponibles($filtros);
+            });
+
+            $filtros.find("CodVehiculoTransmision").change(function () {
+                verificarProvidersDisponibles($filtros);
+            });
+
+            //Verificamos los providers disponibles
+            verificarProvidersDisponibles($filtros);
+        });
+    </script>
+}

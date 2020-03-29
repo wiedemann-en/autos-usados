@@ -1,0 +1,41 @@
+USE [BusquedaVehiculos]
+GO
+
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('AUTOFOCO', 'MOD', 'jeep@cherokee', 'Cherokee');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('AUTOFOCO', 'MOD', 'jeep@compass', 'Compass');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('AUTOFOCO', 'MOD', 'jeep@gladiator', 'Gladiator');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('AUTOFOCO', 'MOD', 'jeep@grand+cherokee', 'Grand Cherokee');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('AUTOFOCO', 'MOD', 'jeep@ika', 'IKA');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('AUTOFOCO', 'MOD', 'jeep@new+cherokee', 'New Cherokee');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('AUTOFOCO', 'MOD', 'jeep@otros', 'Otros');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('AUTOFOCO', 'MOD', 'jeep@patriot', 'Patriot');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('AUTOFOCO', 'MOD', 'jeep@renegade', 'Renegade');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('AUTOFOCO', 'MOD', 'jeep@uaz', 'UAZ');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('AUTOFOCO', 'MOD', 'jeep@willys', 'Willys');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('AUTOFOCO', 'MOD', 'jeep@wrangler', 'Wrangler');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('DEAUTOS', 'MOD', '377@1828', 'Grand Cherokee');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('DEAUTOS', 'MOD', '377@1829', 'Cherokee');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('DEAUTOS', 'MOD', '377@1830', 'Wrangler');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('DEAUTOS', 'MOD', '377@2224', 'IKA');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('DEAUTOS', 'MOD', '377@2710', 'Gladiator');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('DEAUTOS', 'MOD', '377@2864', 'Compass');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('DEAUTOS', 'MOD', '377@3018', 'Patriot');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('DEAUTOS', 'MOD', '377@3354', 'Renegade');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('DEMOTORES', 'MOD', '46@3146', 'Cherokee');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('DEMOTORES', 'MOD', '46@3160', 'Compass');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('DEMOTORES', 'MOD', '46@3162', 'Grand Cherokee');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('DEMOTORES', 'MOD', '46@3178', 'Otro Modelo');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('DEMOTORES', 'MOD', '46@3180', 'Patriot');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('DEMOTORES', 'MOD', '46@3189', 'Wrangler');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('MERCADOLIBRE', 'MOD', 'jeep@cherokee', 'Cherokee');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('MERCADOLIBRE', 'MOD', 'jeep@compass', 'Compass');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('MERCADOLIBRE', 'MOD', 'jeep@grand-cherokee', 'Grand Cherokee');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('MERCADOLIBRE', 'MOD', 'jeep@otros-modelos', 'Otros Modelos');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('MERCADOLIBRE', 'MOD', 'jeep@patriot', 'Patriot');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('MERCADOLIBRE', 'MOD', 'jeep@wrangler', 'Wrangler');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('OLX', 'MOD', 'jeep@cherokee', 'Cherokee');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('OLX', 'MOD', 'jeep@compass', 'Compass');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('OLX', 'MOD', 'jeep@grand+cherokee', 'Grand Cherokee');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('OLX', 'MOD', 'jeep@other', 'Otro');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('OLX', 'MOD', 'jeep@patriot', 'Patriot');
+INSERT INTO TB_ProviderCatalogoItem (CodProvider, CodCatalogo, CodItemProvider, DescItemProvider) VALUES ('OLX', 'MOD', 'jeep@wrangler', 'Wrangler');

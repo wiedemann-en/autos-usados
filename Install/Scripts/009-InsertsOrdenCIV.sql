@@ -1,0 +1,39 @@
+USE [BusquedaVehiculos]
+GO
+
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('ALAMAULA', 'ORD', 'sort=dt&order=desc', 'mas-recientes');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('ALAMAULA', 'ORD', 'sort=pr&order=asc', 'precio-ascendente');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('ALAMAULA', 'ORD', 'sort=pr&order=desc', 'precio-descendente');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('AUTOFOCO', 'ORD', 'relevance,ASC', 'destacados');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('AUTOFOCO', 'ORD', 'year,ASC', 'ano-ascendente');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('AUTOFOCO', 'ORD', 'year,DESC', 'ano-descendente');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('AUTOFOCO', 'ORD', 'price,ASC', 'precio-ascendente');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('AUTOFOCO', 'ORD', 'price,DESC', 'precio-descendente');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('AUTOFOCO', 'ORD', 'city,ASC', 'ciudad-ascendente');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('AUTOFOCO', 'ORD', 'city,DESC', 'ciudad-descendente');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('AUTOFOCO', 'ORD', 'mileage,ASC', 'kilometraje-ascendenete');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('AUTOFOCO', 'ORD', 'mileage,DESC', 'kilometraje-descendente');
+--INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('AUTOFOCO', 'ORD', 'published-at,ASC', '');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('AUTOFOCO', 'ORD', 'published-at,DESC', 'mas-recientes');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('DEAUTOS', 'ORD', 'YEA', 'ano-ascendente');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('DEAUTOS', 'ORD', 'YED', 'ano-descendente');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('DEAUTOS', 'ORD', '', 'destacados');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('DEAUTOS', 'ORD', 'VKA', 'kilometraje-ascendenete');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('DEAUTOS', 'ORD', 'VKD', 'kilometraje-descendente');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('DEAUTOS', 'ORD', 'PRA', 'precio-ascendente');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('DEAUTOS', 'ORD', 'PRD', 'precio-descendente');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('DEMOTORES', 'ORD', 'ya', 'ano-ascendente');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('DEMOTORES', 'ORD', 'yd', 'ano-descendente');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('DEMOTORES', 'ORD', '', 'destacados');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('DEMOTORES', 'ORD', 'mia', 'kilometraje-ascendenete');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('DEMOTORES', 'ORD', 'mid', 'kilometraje-descendente');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('DEMOTORES', 'ORD', 'cd', 'mas-recientes');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('DEMOTORES', 'ORD', 'v', 'mas-visitados');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('DEMOTORES', 'ORD', 'plca', 'precio-ascendente');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('DEMOTORES', 'ORD', 'plcd', 'precio-descendente');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('MERCADOLIBRE', 'ORD', '', 'destacados');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('MERCADOLIBRE', 'ORD', 'PRICE*DESC', 'precio-descendente');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('MERCADOLIBRE', 'ORD', 'PRICE', 'precio-ascendente');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('OLX', 'ORD', 'datedesc', 'mas-recientes');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('OLX', 'ORD', 'price', 'precio-ascendente');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('OLX', 'ORD', 'pricedesc', 'precio-descendente');

@@ -1,0 +1,9 @@
+C:\Source\BusquedaVehiculos\BusquedaVehiculos.Services\bin\Debug\BusquedaVehiculos.Services.dll
+C:\Source\BusquedaVehiculos\BusquedaVehiculos.Services\bin\Debug\BusquedaVehiculos.Services.pdb
+C:\Source\BusquedaVehiculos\BusquedaVehiculos.Services\obj\Debug\BusquedaVehiculos.Services.dll
+C:\Source\BusquedaVehiculos\BusquedaVehiculos.Services\obj\Debug\BusquedaVehiculos.Services.pdb
+C:\Source\BusquedaVehiculos\BusquedaVehiculos.Services\obj\Debug\BusquedaVehiculos.Services.csprojResolveAssemblyReference.cache
+C:\Source\BusquedaVehiculos\Dev\Source\BusquedaVehiculos.Services\bin\Debug\BusquedaVehiculos.Services.dll
+C:\Source\BusquedaVehiculos\Dev\Source\BusquedaVehiculos.Services\bin\Debug\BusquedaVehiculos.Services.pdb
+C:\Source\BusquedaVehiculos\Dev\Source\BusquedaVehiculos.Services\obj\Debug\BusquedaVehiculos.Services.dll
+C:\Source\BusquedaVehiculos\Dev\Source\BusquedaVehiculos.Services\obj\Debug\BusquedaVehiculos.Services.pdb

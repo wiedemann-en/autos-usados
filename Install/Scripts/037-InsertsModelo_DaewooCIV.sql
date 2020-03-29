@@ -1,0 +1,39 @@
+USE [BusquedaVehiculos]
+GO
+
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('ALAMAULA', 'MOD', 'daewoo@cielo', 'daewoo@cielo');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('ALAMAULA', 'MOD', 'daewoo@espero', 'daewoo@espero');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('ALAMAULA', 'MOD', 'daewoo@lanos', 'daewoo@lanos');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('ALAMAULA', 'MOD', 'daewoo@matiz', 'daewoo@matiz');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('ALAMAULA', 'MOD', 'daewoo@nubira', 'daewoo@nubira');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('ALAMAULA', 'MOD', 'daewoo@prince', 'daewoo@prince');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('ALAMAULA', 'MOD', 'daewoo@racer', 'daewoo@racer');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('ALAMAULA', 'MOD', 'daewoo@tacuma', 'daewoo@tacuma');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('ALAMAULA', 'MOD', 'daewoo@tico', 'daewoo@tico');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('AUTOFOCO', 'MOD', 'daewoo@cielo', 'daewoo@cielo');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('AUTOFOCO', 'MOD', 'daewoo@damas', 'daewoo@damas');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('AUTOFOCO', 'MOD', 'daewoo@espero', 'daewoo@espero');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('AUTOFOCO', 'MOD', 'daewoo@korando', 'daewoo@korando');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('AUTOFOCO', 'MOD', 'daewoo@lanos', 'daewoo@lanos');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('AUTOFOCO', 'MOD', 'daewoo@matiz', 'daewoo@matiz');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('AUTOFOCO', 'MOD', 'daewoo@nubira', 'daewoo@nubira');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('AUTOFOCO', 'MOD', 'daewoo@racer', 'daewoo@racer');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('AUTOFOCO', 'MOD', 'daewoo@tico', 'daewoo@tico');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('DEAUTOS', 'MOD', '366@1759', 'daewoo@lanos');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('DEAUTOS', 'MOD', '366@1763', 'daewoo@matiz');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('DEMOTORES', 'MOD', '19@1216', 'daewoo@cielo');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('DEMOTORES', 'MOD', '19@1222', 'daewoo@espero');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('DEMOTORES', 'MOD', '19@1231', 'daewoo@lanos');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('DEMOTORES', 'MOD', '19@1235', 'daewoo@matiz');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('DEMOTORES', 'MOD', '19@1240', 'daewoo@nubira');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('DEMOTORES', 'MOD', '19@1254', 'daewoo@tico');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('MERCADOLIBRE', 'MOD', 'daewoo@cielo', 'daewoo@cielo');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('MERCADOLIBRE', 'MOD', 'daewoo@damas', 'daewoo@damas');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('MERCADOLIBRE', 'MOD', 'daewoo@espero', 'daewoo@espero');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('MERCADOLIBRE', 'MOD', 'daewoo@labo', 'daewoo@labo');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('MERCADOLIBRE', 'MOD', 'daewoo@lanos', 'daewoo@lanos');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('MERCADOLIBRE', 'MOD', 'daewoo@matiz', 'daewoo@matiz');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('MERCADOLIBRE', 'MOD', 'daewoo@nubira', 'daewoo@nubira');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('MERCADOLIBRE', 'MOD', 'daewoo@otros-modelos', 'daewoo@otro');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('MERCADOLIBRE', 'MOD', 'daewoo@racer', 'daewoo@racer');
+INSERT INTO TB_ProviderCatalogoItemConv (CodProvider, CodCatalogo, CodItemProvider, CodItemConv) VALUES ('MERCADOLIBRE', 'MOD', 'daewoo@tico', 'daewoo@tico');

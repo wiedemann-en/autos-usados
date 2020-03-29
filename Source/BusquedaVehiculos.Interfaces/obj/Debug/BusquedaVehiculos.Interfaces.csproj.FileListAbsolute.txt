@@ -1,0 +1,10 @@
+C:\Source\BusquedaVehiculos\Dev\Source\BusquedaVehiculos.Interfaces\bin\Debug\BusquedaVehiculos.Interfaces.dll
+C:\Source\BusquedaVehiculos\Dev\Source\BusquedaVehiculos.Interfaces\bin\Debug\BusquedaVehiculos.Interfaces.pdb
+C:\Source\BusquedaVehiculos\Dev\Source\BusquedaVehiculos.Interfaces\bin\Debug\BusquedaVehiculos.Contracts.dll
+C:\Source\BusquedaVehiculos\Dev\Source\BusquedaVehiculos.Interfaces\bin\Debug\HtmlAgilityPack.dll
+C:\Source\BusquedaVehiculos\Dev\Source\BusquedaVehiculos.Interfaces\bin\Debug\BusquedaVehiculos.Contracts.pdb
+C:\Source\BusquedaVehiculos\Dev\Source\BusquedaVehiculos.Interfaces\bin\Debug\HtmlAgilityPack.pdb
+C:\Source\BusquedaVehiculos\Dev\Source\BusquedaVehiculos.Interfaces\bin\Debug\HtmlAgilityPack.xml
+C:\Source\BusquedaVehiculos\Dev\Source\BusquedaVehiculos.Interfaces\obj\Debug\BusquedaVehiculos.Interfaces.csprojResolveAssemblyReference.cache
+C:\Source\BusquedaVehiculos\Dev\Source\BusquedaVehiculos.Interfaces\obj\Debug\BusquedaVehiculos.Interfaces.dll
+C:\Source\BusquedaVehiculos\Dev\Source\BusquedaVehiculos.Interfaces\obj\Debug\BusquedaVehiculos.Interfaces.pdb

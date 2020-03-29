@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C8BD8BF3-3E6C-4D88-B129-FFE8DFFFE3DF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BusquedaVehiculos.Providers</RootNamespace>
+    <AssemblyName>BusquedaVehiculos.Providers</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.5, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9.5\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebKit.Interop">
+      <HintPath>..\Library\WebKit.Interop.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="WebKitBrowser">
+      <HintPath>..\Library\WebKitBrowser.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helpers\HtmlNodeHelpers.cs" />
+    <Compile Include="Manager\ProviderDisponible.cs" />
+    <Compile Include="PhantomJS\PhantomJSExe.cs" />
+    <Compile Include="PhantomJS\PhantomJSException.cs" />
+    <Compile Include="PhantomJS\PhantomJS.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\AlaMaula\ProviderAlaMaulaPaginator.cs" />
+    <Compile Include="Providers\AlaMaula\ProviderAlaMaulaSignalR.cs" />
+    <Compile Include="Providers\AlaMaula\ProviderAlaMaulaSync.cs" />
+    <Compile Include="Providers\AlaMaula\ProviderAlaMaulaFormatter.cs" />
+    <Compile Include="Providers\AlaMaula\ProviderAlaMaulaUrlComposer.cs" />
+    <Compile Include="Providers\AutoFoco\ProviderAutoFocoPaginator.cs" />
+    <Compile Include="Providers\AutoFoco\ProviderAutoFocoSignalR.cs" />
+    <Compile Include="Providers\AutoFoco\ProviderAutoFocoSync.cs" />
+    <Compile Include="Providers\AutoFoco\ProviderAutoFocoFormatter.cs" />
+    <Compile Include="Providers\AutoFoco\ProviderAutoFocoUrlComposer.cs" />
+    <Compile Include="Providers\Base\ProviderBase.cs" />
+    <Compile Include="Providers\Base\ProviderBaseSignalR.cs" />
+    <Compile Include="Providers\Base\ProviderBaseSync.cs" />
+    <Compile Include="Providers\Base\ProviderBaseUrlComposer.cs" />
+    <Compile Include="Providers\Base\ProviderContentResolver.cs" />
+    <Compile Include="Providers\DeAutos\ProviderDeAutosPaginator.cs" />
+    <Compile Include="Providers\DeAutos\ProviderDeAutosSignalR.cs" />
+    <Compile Include="Providers\DeAutos\ProviderDeAutosSync.cs" />
+    <Compile Include="Providers\DeAutos\ProviderDeAutosFormatter.cs" />
+    <Compile Include="Providers\DeAutos\ProviderDeAutosUrlComposer.cs" />
+    <Compile Include="Providers\DeMotores\ProviderDeMotoresPaginator.cs" />
+    <Compile Include="Providers\DeMotores\ProviderDeMotoresSignalR.cs" />
+    <Compile Include="Providers\DeMotores\ProviderDeMotoresSync.cs" />
+    <Compile Include="Providers\DeMotores\ProviderDeMotoresFormatter.cs" />
+    <Compile Include="Providers\DeMotores\ProviderDeMotoresUrlComposer.cs" />
+    <Compile Include="Providers\MercadoLibre\ProviderMercadoLibreFormatter.cs" />
+    <Compile Include="Providers\MercadoLibre\ProviderMercadoLibrePaginator.cs" />
+    <Compile Include="Providers\MercadoLibre\ProviderMercadoLibreSignalR.cs" />
+    <Compile Include="Providers\MercadoLibre\ProviderMercadoLibreSync.cs" />
+    <Compile Include="Providers\MercadoLibre\ProviderMercadoLibreUrlComposer.cs" />
+    <Compile Include="Providers\Olx\ProviderOlxFormatter.cs" />
+    <Compile Include="Providers\Olx\ProviderOlxPaginator.cs" />
+    <Compile Include="Providers\Olx\ProviderOlxSignalR.cs" />
+    <Compile Include="Providers\Olx\ProviderOlxSync.cs" />
+    <Compile Include="Manager\ProviderManagerSync.cs" />
+    <Compile Include="Manager\ProviderManagerSingalR.cs" />
+    <Compile Include="Providers\Olx\ProviderOlxUrlComposer.cs" />
+    <Compile Include="SignalR\BusquedaJob.cs" />
+    <Compile Include="SignalR\BusquedaLongRunningTask.cs" />
+    <Compile Include="SignalR\ProgressEventArgs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\packages\PhantomJS.2.1.1\tools\phantomjs\phantomjs.exe">
+      <Link>phantomjs.exe</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="phantomjs-license.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusquedaVehiculos.Contracts\BusquedaVehiculos.Contracts.csproj">
+      <Project>{5949eb44-5985-4ef2-a50f-a523fa225870}</Project>
+      <Name>BusquedaVehiculos.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusquedaVehiculos.Infra\BusquedaVehiculos.Infra.csproj">
+      <Project>{093bc9b1-307e-43fb-8675-24db76cca723}</Project>
+      <Name>BusquedaVehiculos.Infra</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusquedaVehiculos.Interfaces\BusquedaVehiculos.Interfaces.csproj">
+      <Project>{6b47f5aa-64dc-413e-8a47-931a34536857}</Project>
+      <Name>BusquedaVehiculos.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusquedaVehiculos.Model\BusquedaVehiculos.Model.csproj">
+      <Project>{08de54c0-dc5e-4c1e-b7ba-aa3dccdf8ca8}</Project>
+      <Name>BusquedaVehiculos.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
